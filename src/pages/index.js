@@ -1,8 +1,8 @@
 import CardFilme from '@/Components/CardFilme'
+import Header from '@/Components/Header'
 import SecaoFilmes from '@/Components/SecaoFilmes'
 import Titulo from '@/Components/Titulo'
 import { Inter } from 'next/font/google'
-import SlideshowIcon from '@mui/icons-material/Slideshow';
 
 const inter = Inter({ subsets: ['latin'] })
 const filmes=[
@@ -30,15 +30,7 @@ const filmes=[
 export default function Home() {
   return (
   <>  
-    <header className='flex justity-between w-100 bg-slate'>
-    <div className='flex m-4 text-amber-400'>
-      <SlideshowIcon className='text'/>
-      <h1>R2 Filmes</h1>
-      </div>
-
-      <a className='m-4' href='#'>Sobre</a>
-    </header>
-    
+    <Header/>    
     <div>
       <img className='h-72 brightness-50 object-cover w-screen' src='https://www.themoviedb.org/t/p/original/4t0oBFrJyweYPt0hocW6RUa0b6H.jpg'></img>
     </div>
@@ -57,7 +49,7 @@ export default function Home() {
 
       <Titulo>Lançamentos</Titulo>
       
-    </main>//JSX
+    </main>
     </>
   )
 }
