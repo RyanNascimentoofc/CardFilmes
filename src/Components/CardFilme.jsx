@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 export default function CardFilme({filme}){
   const [Favorito, setFavorito] = useState(false)
+  const poster = "https://www.themoviedb.org/t/p/w220_and_h330_face/" + filme.poster_path
     return(
         <div className='flex flex-col p-3 w-56'>
           
@@ -21,14 +22,14 @@ export default function CardFilme({filme}){
               onClick={ () => setFavorito(true)}
               />
             }
-            <img className='rounded-lg' src={filme.poster}></img>
+            <img className='rounded-lg' src={poster}></img>
           </div>
 
-          <h4 className='text-xl my-2 line-clamp-1 w-fit'>{filme.titulo}</h4>
+          <h4 className='text-xl my-2 line-clamp-1 w-fit'>{filme.title}</h4>
           
           <div className="flex justify-center items-center">
             <StarIcon className="text-amber-400"/>
-            <span className='text-lg'>{filme.nota}</span>
+            <span className='text-lg'>{filme.vote_average}</span>
           </div>
  
           <a href='#' className='rounded-lg bg-cyan-700 py-2  text-center'>Detalhes</a>
